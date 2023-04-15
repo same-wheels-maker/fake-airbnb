@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>测试</title>
     <style type="text/css">
@@ -8,9 +8,9 @@
         width: 0px;
         height: 0px;
         margin: 100px auto;
-        border-width: 0 80px 138.56px 80px ;
+        border-width: 0 80px 138.56px 80px;
         border-style: solid;
-        border-color: transparent transparent #A962CE;
+        border-color: transparent transparent #a962ce;
       }
       .circle {
         margin: 100px auto;
@@ -19,59 +19,88 @@
         height: 80px;
         background: #666;
       }
-      .sector{
+      .sector {
         border-radius: 80px 0 0;
         width: 80px;
         height: 80px;
         background: #666;
       }
 
-      .shanxing{
-          position: relative;
-          width: 200px;
-          height: 200px;
-          border-radius: 100px;
+      .shanxing {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
       }
 
-      .sx1{
-          position: absolute;
-          width: 200px;
-          height: 200px;
-          transform: rotate(0deg);
-          clip: rect(0, 100px, 200px, 0px); /*这个clip属性用来绘制半圆，在clip的rect范围内的内容显示出来，使用clip属性，元素必须是absolute的 */
-          border-radius: 100px;
-          background-color: #f00;
-          /*-webkit-animation: an1 2s infinite linear; */
+      .sx1 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        transform: rotate(0deg);
+        clip: rect(
+          0,
+          100px,
+          200px,
+          0px
+        ); /*这个clip属性用来绘制半圆，在clip的rect范围内的内容显示出来，使用clip属性，元素必须是absolute的 */
+        border-radius: 100px;
+        background-color: #f00;
+        /*-webkit-animation: an1 2s infinite linear; */
       }
 
-      .sx2{
-          position: absolute;
-          width: 200px;
-          height: 200px;
-          transform: rotate(0deg);
-          clip: rect(0px,100px,200px,0px);
-          border-radius: 100px;
-          background-color: #f00;
-          /*-webkit-animation: an2 2s infinite linear;*/
+      .sx2 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        transform: rotate(0deg);
+        clip: rect(0px, 100px, 200px, 0px);
+        border-radius: 100px;
+        background-color: #f00;
+        /*-webkit-animation: an2 2s infinite linear;*/
       }
 
-      .shanxing1 .sx1{transform: rotate(-30deg);}
-      .shanxing1 .sx2{transform: rotate(-150deg);}
+      .shanxing1 .sx1 {
+        transform: rotate(-30deg);
+      }
+      .shanxing1 .sx2 {
+        transform: rotate(-150deg);
+      }
 
-      .shanxing2 .sx1{transform: rotate(-45deg);}
-      .shanxing2 .sx2{transform: rotate(-140deg);}
+      .shanxing2 .sx1 {
+        transform: rotate(-45deg);
+      }
+      .shanxing2 .sx2 {
+        transform: rotate(-140deg);
+      }
 
-      .shanxing3 .sx1{transform: rotate(45deg);}
-      .shanxing3 .sx2{transform: rotate(-45deg);}
+      .shanxing3 .sx1 {
+        transform: rotate(45deg);
+      }
+      .shanxing3 .sx2 {
+        transform: rotate(-45deg);
+      }
 
-      .shanxing4 .sx1{transform: rotate(45deg);background-color: #A962CE;}
-      .shanxing4 .sx2{transform: rotate(-45deg);background-color: #A962CE;}
+      .shanxing4 .sx1 {
+        transform: rotate(45deg);
+        background-color: #a962ce;
+      }
+      .shanxing4 .sx2 {
+        transform: rotate(-45deg);
+        background-color: #a962ce;
+      }
 
-      .shanxing5 .sx1{transform: rotate(45deg);background-color: #f00;}
-      .shanxing5 .sx2{transform: rotate(-45deg);background-color: #0f0; } 
+      .shanxing5 .sx1 {
+        transform: rotate(45deg);
+        background-color: #f00;
+      }
+      .shanxing5 .sx2 {
+        transform: rotate(-45deg);
+        background-color: #0f0;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="triangle">等腰三角形</div>
     <div class="circle">圆形</div>
     <div class="sector">扇形</div>
@@ -88,7 +117,7 @@
 
     <div class="shanxing shanxing3">
       <div class="sx1"></div>
-       <div class="sx2"></div>
+      <div class="sx2"></div>
     </div>
 
     <div class="shanxing shanxing4">
@@ -100,5 +129,5 @@
       <div class="sx1"></div>
       <div class="sx2"></div>
     </div>
-</body>
+  </body>
 </html>

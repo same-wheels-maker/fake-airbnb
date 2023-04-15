@@ -1,9 +1,7 @@
 import React, { memo } from 'react'
 
 const Detail = memo(() => {
-  return (
-    <div>detail</div>
-  )
+  return <div>detail</div>
 })
 
 export default Detail
