@@ -29,4 +29,5 @@ class AppRequest {
   }
 }
 
-export default new AppRequest('http://codercba.com:1888/airbnb/api', 10000)
+const appRequest = new AppRequest('http://codercba.com:1888/airbnb/api', 10000)
+export default appRequest

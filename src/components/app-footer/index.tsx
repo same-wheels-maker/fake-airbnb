@@ -1,9 +1,8 @@
 import React, { memo } from 'react'
+import { FooterWrapper } from './style'
 
-const index = memo(() => {
-  return (
-    <div>index</div>
-  )
+const AppFooter = memo((props: any) => {
+  return <FooterWrapper />
 })
 
-export default index
+export default AppFooter
