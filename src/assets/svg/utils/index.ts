@@ -1,9 +1,9 @@
-export const styleStrToObject = (styleStr: string): any => {
+export const styleStrToObject = (styleStr: string) => {
   const obj = {}
   const s = styleStr
     ?.toLowerCase?.()
-    .replace(/-(.)/g, function (m, g) {
+    .replace(/-(.)/g, function (_, g) {
       return g.toUpperCase()
     })
-    .replace(//, ')
+    .replace(/;\s?$/, '')
 }
