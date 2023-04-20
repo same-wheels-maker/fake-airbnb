@@ -8,7 +8,7 @@ const Entire = React.lazy(() => import('@/views/entire'))
 const routes: any[] = [
   {
     path: '/',
-    element: <Navigate to="/home" />
+    element: <Navigate to="/home" />,
   },
   {
     path: '/home',
