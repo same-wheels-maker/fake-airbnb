@@ -34,6 +34,8 @@ export const RightWrapper = styled.div`
     border: 1px solid #DDDDDD;
     border-radius: 21px;
     height: 21px;
+    color: #717171;
     cursor: pointer;
+    ${props => props.theme.light.mixin.boxShadow}
   }
 `

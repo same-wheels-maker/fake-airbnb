@@ -10,6 +10,10 @@ import '@/assets/css/index.less'
 import store from './store'
 import theme from './assets/theme'
 
+const map = new Map()
+map.set('1', '2')
+console.log(JSON.stringify(map))
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <Suspense fallback="loading">
