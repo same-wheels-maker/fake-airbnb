@@ -9,15 +9,16 @@ export const CenterWrapper = styled.div`
     width: 300px;
     height: 48px;
     padding: 0 8px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     border-radius: 24px;
     cursor: pointer;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.05);
-    ${props => props.theme.light.mixin.boxShadow}
+    box-shadow: 0 1px 2px ${(props) => props.theme?.boxShadowSecondaryColor},
+      0 4px 12px ${(props) => props.theme?.boxShadowTertiaryColor};
+    ${(props) => props.theme?.mixin?.boxShadow}
 
     .text {
       padding: 0 16px;
-      color: #222;
+      color: ${(props) => props.theme.fontPrimaryColor};
       font-weight: 600;
     }
 
@@ -30,7 +31,7 @@ export const CenterWrapper = styled.div`
       border-radius: 50%;
       color: #fff;
 
-      background-color: ${props => props.theme.light.primaryColor};
+      background-color: ${(props) => props.theme?.primaryColor};
     }
   }
 `

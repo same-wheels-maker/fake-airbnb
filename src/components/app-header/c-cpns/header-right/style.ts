@@ -6,7 +6,7 @@ export const RightWrapper = styled.div`
   flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-end;
-  color: ${props => props.theme.light.fontPrimaryColor};
+  color: ${(props) => props.theme?.fontPrimaryColor};
   font-weight: 600;
 
   .btns {
@@ -20,20 +20,20 @@ export const RightWrapper = styled.div`
       padding: 12px 15px;
       cursor: pointer;
       border-radius: 21px;
-      
+
       &:hover {
-      background-color: #f5f5f5;
-    }
+        background-color: ${(props) => props.theme?.fontPrimaryBackgroundColor};
+      }
     }
   }
 
   .profile {
     position: relative;
     padding: 10px 5px 10px 12px;
-    border: 1px solid #DDDDDD;
+    border: 2px solid #dddddd;
     border-radius: 21px;
-    color: #717171;
-    ${props => props.theme.light.mixin.boxShadow}
+    color: ${(props) => props.theme?.fontTertiaryColor};
+    ${(props) => props.theme?.mixin?.boxShadow}
 
     .badge {
       display: flex;
@@ -48,10 +48,11 @@ export const RightWrapper = styled.div`
       right: 0;
       width: 240px;
       border-radius: 12px;
-      background-color: #fff;
-      box-shadow:  0 0 6px rgba(0, 0, 0, .12);
+      background-color: ${(props) => props.theme?.backgroundColor};
+      box-shadow: 0 0 6px ${(props) => props.theme?.boxShadowPrimaryColor};
 
-      .top, .bottom {
+      .top,
+      .bottom {
         padding: 8px 0;
 
         .item {
@@ -62,12 +63,12 @@ export const RightWrapper = styled.div`
           cursor: pointer;
 
           &:hover {
-            background-color: #f5f5f5;
+            background-color: ${(props) => props.theme?.fontPrimaryBackgroundColor};
           }
         }
 
         .register {
-          color: ${props => props.theme.light.fontPrimaryColor};
+          color: ${(props) => props.theme?.fontPrimaryColor};
           font-weight: 600;
         }
       }
@@ -77,6 +78,4 @@ export const RightWrapper = styled.div`
       }
     }
   }
-
-  
 `
