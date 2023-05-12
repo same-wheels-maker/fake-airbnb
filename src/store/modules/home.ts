@@ -11,6 +11,7 @@ const homeSlice = createSlice({
   initialState: {
     goodPricesInfo: {
       title: '',
+      list: [],
     } as IGoodPriceInfo,
   },
   reducers: {

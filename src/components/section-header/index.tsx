@@ -8,7 +8,7 @@ interface Props {
 }
 
 const SectionHeader: React.FC<Props> = memo((props) => {
-  const { title, subtitle = '默认子标题的数据' } = props
+  const { title, subtitle } = props
 
   return (
     <HeaderWrapper>

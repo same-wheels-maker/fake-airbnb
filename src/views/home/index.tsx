@@ -5,6 +5,7 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import { fetchHomeDataAction } from '@/store/modules/home'
 import { AppDispatch, RootState } from '@/types'
 import SectionHeader from '@/components/section-header'
+import RoomItem from '@/components/room-item'
 
 const Home = memo(() => {
   // 从redux中获取数据
@@ -24,7 +25,14 @@ const Home = memo(() => {
       <HomeBanner></HomeBanner>
       <div className='content'>
         <div className='good-price'>
-          <SectionHeader title={goodPricesInfo.title}></SectionHeader>
+          <SectionHeader title={goodPricesInfo?.title}></SectionHeader>
+          <div className='rooms'>
+            {
+              goodPricesInfo.list.map((item) => (
+                <RoomItem key={item.id} data={item} />
+              ))
+            }
+          </div>
         </div>
       </div>
     </HomeWrapper>

@@ -10,4 +10,5 @@ export interface ITheme {
 
 export interface IGoodPriceInfo {
   title: string
+  list: any[]
 }
