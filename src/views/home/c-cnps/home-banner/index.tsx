@@ -5,7 +5,8 @@ const HomeBanner = memo(() => {
   
 
   return (
-    <BannerWrapper></BannerWrapper>
+    <BannerWrapper>
+    </BannerWrapper>
   )
 })
 

@@ -29,7 +29,7 @@ const theme: any = {
     fontTertiaryColor: 'rgba(255, 255, 255, .8)',
     lightFontPrimaryColor: '#b0dfe4',
     fontPrimaryBackgroundColor: 'rgba(255, 255, 255, .12)',
-    boxShadowPrimaryColor: 'rgba(255, 255, 255, .3)',
+    boxShadowPrimaryColor: 'rgba(255, 255, 255, .5)',
     boxShadowSecondaryColor: 'rgba(255, 255, 255, .08)',
     boxShadowTertiaryColor: 'rgba(255, 255, 255, .05)',
     mixin: {

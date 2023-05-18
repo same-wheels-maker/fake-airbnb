@@ -6,6 +6,7 @@ import { fetchHomeDataAction } from '@/store/modules/home'
 import { AppDispatch, RootState } from '@/types'
 import SectionHeader from '@/components/section-header'
 import RoomItem from '@/components/room-item'
+import { Button } from '@mui/material'
 
 const Home = memo(() => {
   // 从redux中获取数据
