@@ -30,7 +30,7 @@ export const ItemWrapper = styled.div<WrapperProperty>`
     }
 
     .desc {
-      margin: 10px 0 5px;
+      margin: 10px 0;
       font-size: 12px;
       font-weight: 700;
       /* color: ${(props) => props.verifyColor}; */
@@ -48,7 +48,27 @@ export const ItemWrapper = styled.div<WrapperProperty>`
     }
 
     .price {
-      margin: 8px 0;
+      margin: 6px 0;
+    }
+
+    .bottom {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 700;
+
+      .rating {
+        font-size: 14px;
+
+        .MuiRating-decimal {
+          margin: 0 -1px;
+        }
+      }
+
+      .extra {
+        margin: 0 2px 0 8px;
+        color: ${(props) => props.theme?.lightFontSecondaryColor};
+      }
     }
   }
 `

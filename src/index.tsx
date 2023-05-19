@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
+import 'antd/dist/reset.css'
 
 import 'normalize.css'
 import '@/assets/css/index.less'

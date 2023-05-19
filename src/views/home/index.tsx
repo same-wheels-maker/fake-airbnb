@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react'
+import { memo, useEffect } from 'react'
 import { HomeWrapper } from './style'
 import HomeBanner from './c-cnps/home-banner'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'

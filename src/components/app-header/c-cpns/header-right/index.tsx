@@ -11,8 +11,8 @@ import theme from '@/assets/theme'
 const HeaderRight = memo(() => {
   const [ showPanel, setShowPanel ] = useState(false)
   const dispatch = useDispatch()
-  const { curTheme } = useSelector((state: RootState) => ({
-    curTheme: state.global.curTheme
+  const { themeMode: mode } = useSelector((state: RootState) => ({
+    themeMode: state.global.themeMode
   }), shallowEqual)
 
   useEffect(() => {
@@ -29,8 +29,8 @@ const HeaderRight = memo(() => {
     setShowPanel(true)
   }
 
-  function themeClickHandle(themeKey: string) {
-    const newTheme = themeKey === 'dark' ? { key: 'light', label: theme.light.label } : { key: 'dark', label: theme.dark.label }
+  function themeClickHandle(mode: string) {
+    const newTheme = mode === 'light' ? 'dark' : 'light'
     dispatch(changeThemeAction(newTheme))
   }
 
@@ -39,7 +39,7 @@ const HeaderRight = memo(() => {
       <div className='btns'>
         <span className='btn'>登录</span>
         <span className='btn'>注册</span>
-        <span className='btn' onClick={() => themeClickHandle(curTheme.key)}>{curTheme.label}</span>
+        <span className='btn' onClick={() => themeClickHandle(mode)}>{theme[mode]?.label}</span>
         <span className='btn'>
           <IconGlobal />
         </span>

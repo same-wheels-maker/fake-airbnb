@@ -1,13 +1,17 @@
+import { createTheme } from '@mui/material'
+
 const theme: any = {
   light: {
-    label: '暗色',
+    label: '暗',
+    mui: createTheme(),
     backgroundColor: '#fff',
     primaryColor: '#ff385c',
     secondaryColor: '#00848A',
     fontPrimaryColor: '#222',
     fontSecondaryColor: '#484848',
     fontTertiaryColor: '#717171',
-    lightFontPrimaryColor: '#39576a',
+    lightFontPrimaryColor: '#bfbfbf',
+    lightFontSecondaryColor: '#f759ab',
     fontPrimaryBackgroundColor: '#f5f5f5',
     boxShadowPrimaryColor: 'rgba(0, 0, 0, .12)',
     boxShadowSecondaryColor: 'rgba(0, 0, 0, .08)',
@@ -20,14 +24,20 @@ const theme: any = {
     },
   },
   dark: {
-    label: '明色',
+    label: '明',
+    mui: createTheme({
+      palette: {
+        mode: 'dark',
+      },
+    }),
     backgroundColor: '#141414',
     primaryColor: '#e84749',
     secondaryColor: '#00848A',
     fontPrimaryColor: '#fff',
     fontSecondaryColor: 'rgba(255, 255, 255, .8)',
     fontTertiaryColor: 'rgba(255, 255, 255, .8)',
-    lightFontPrimaryColor: '#b0dfe4',
+    lightFontPrimaryColor: '#8c8c8c',
+    lightFontSecondaryColor: '#b37feb',
     fontPrimaryBackgroundColor: 'rgba(255, 255, 255, .12)',
     boxShadowPrimaryColor: 'rgba(255, 255, 255, .5)',
     boxShadowSecondaryColor: 'rgba(255, 255, 255, .08)',

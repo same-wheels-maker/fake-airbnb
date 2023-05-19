@@ -5,13 +5,13 @@ import { createSlice } from '@reduxjs/toolkit'
 const globalSlice = createSlice({
   name: 'global',
   initialState: {
-    curTheme: {} as ITheme,
+    themeMode: '',
   },
   reducers: {
     changeThemeAction(state, { payload }) {
-      document.body.setAttribute('class', payload.key)
-      localCache.setCache('theme', payload)
-      state.curTheme = payload
+      document.body.setAttribute('class', payload)
+      localCache.setCache('mode', payload)
+      state.themeMode = payload
     },
   },
   extraReducers: {},

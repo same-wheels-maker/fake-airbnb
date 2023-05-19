@@ -1,31 +1,36 @@
-import React, { memo, useEffect } from 'react'
-import { ThemeProvider } from 'styled-components'
+import { memo, useEffect } from 'react'
+import { ThemeProvider as GlobalThemeProvider } from 'styled-components'
+import { ThemeProvider as MaterialThemeProvider } from '@mui/material'
 import { HashRouter } from 'react-router-dom'
-import App from './App'
-import theme from './assets/theme'
-import localCache from './utils/storage'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
+
+import App from './App'
 import { changeThemeAction } from './store/modules/global'
+import localCache from './utils/storage'
+import theme from './assets/theme'
 import { RootState } from './types'
 
 const Theme = memo(() => {
-  const { curTheme } = useSelector((state: RootState) => ({
-    curTheme: state.global.curTheme
+  const { themeMode: mode } = useSelector((state: RootState) => ({
+    themeMode: state.global.themeMode
   }), shallowEqual)
-  
-  const dispatch = useDispatch()
 
+  const dispatch = useDispatch()
   useEffect(() => {
-    const presetTheme = localCache.getCache('theme') || { key: 'light', label: theme.light.label  }
+    const presetTheme = localCache.getCache('mode') || 'light'
     dispatch(changeThemeAction(presetTheme))
   }, [])
 
   return (
-    <ThemeProvider theme={theme[curTheme.key] || {}}>
-      <HashRouter>
-        <App />
-      </HashRouter>
-    </ThemeProvider>
+    <GlobalThemeProvider theme={theme[mode] || {}}>
+      <MaterialThemeProvider theme={theme[mode]?.mui || {}}>
+        {/* <ConfigProvider theme={{ algorithm: theme.defaultAlgorithm }}> */}
+          <HashRouter>
+            <App />
+          </HashRouter>
+        {/* </ConfigProvider> */}
+      </MaterialThemeProvider>
+    </GlobalThemeProvider>
   )
 })
 
