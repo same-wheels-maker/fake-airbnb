@@ -1,4 +1,3 @@
-import { ITheme } from '@/types'
 import localCache from '@/utils/storage'
 import { createSlice } from '@reduxjs/toolkit'
 

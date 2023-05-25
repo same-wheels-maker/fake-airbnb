@@ -1,12 +1,18 @@
 import React, { memo } from 'react'
 import { ItemWrapper } from './style'
 import { Rating } from '@mui/material'
+import PropTypes from 'prop-types'
 
-const RoomItem = memo((props: any) => {
-  const { data } = props
+interface Props {
+  data: any,
+  col?: number 
+}
+
+const RoomItem: React.FC<Props> = memo((props) => {
+  const { data, col = 4 } = props
 
   return (
-    <ItemWrapper verifyColor={data.verify_info?.text_color}>
+    <ItemWrapper verifyColor={data.verify_info?.text_color} col={col}>
       <div className='inner'>
         <div className='cover'>
           <img src={data.picture_url} alt='' />
@@ -24,5 +30,10 @@ const RoomItem = memo((props: any) => {
     </ItemWrapper>
   ) 
 })
+
+RoomItem.propTypes = {
+  data: PropTypes.any,
+  col: PropTypes.number
+}
 
 export default RoomItem

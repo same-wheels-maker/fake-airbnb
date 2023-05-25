@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { HeaderWrapper } from './style'
 
 interface Props {
-  title: string
+  title?: string
   subtitle?: string
 }
 
@@ -13,13 +13,15 @@ const SectionHeader: React.FC<Props> = memo((props) => {
   return (
     <HeaderWrapper>
       <div className='title'>{title}</div>
-      <div className='subtitle'>{subtitle}</div>
+      {
+        subtitle && <div className='subtitle'>{subtitle}</div>
+      }
     </HeaderWrapper>
   )
 })
 
 SectionHeader.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   subtitle: PropTypes.string
 }
 

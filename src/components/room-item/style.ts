@@ -2,11 +2,12 @@ import styled from 'styled-components'
 
 type WrapperProperty = {
   verifyColor: string
+  col: number
 }
 
 export const ItemWrapper = styled.div<WrapperProperty>`
   box-sizing: border-box;
-  width: calc((100% - 16px * 3) / 4);
+  width: calc((100% - 16px * 3) / ${(props) => props.col});
   padding: 10px 8px;
   color: ${(props) => props.theme?.fontSecondaryColor};
 
