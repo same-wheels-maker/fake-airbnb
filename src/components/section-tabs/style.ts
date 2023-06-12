@@ -6,7 +6,7 @@ export const TabsWrapper = styled.div`
 
   .item {
     box-sizing: border-box;
-    width: 100px;
+    min-width: 80px;
     padding: 12px 14px;
     border-radius: 3px;
     color: ${(props) => props.theme?.fontTertiaryColor};
